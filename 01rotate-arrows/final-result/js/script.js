@@ -6,6 +6,7 @@ function radiansToDegrees(radians) {
     return (radians * 180) / Math.PI;
 }
 
+// loop and changes each image within 3000 ms 
 function changeImage() {
     setInterval(() => {
         index = (index + 1) % imgArr.length;
