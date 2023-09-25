@@ -4,7 +4,7 @@ body {
     background-color: whitesmoke;
     height: 100vh;
     overflow: hidden;
-    cursor: cell;
+    cursor: crosshair;
     font-family: 'Dela Gothic One', cursive;
 }
 
@@ -14,16 +14,22 @@ header h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 4vw;
+    color: #333;
 }
 
 img {
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
-    /* transform-origin: 50% 0; */
+    will-change: transform;
+    transition: opacity 300ms ease;
 }
 
+img:hover {
+    opacity: 0;
+    filter: blur(2px);
+}
 
 .img1 {
     top: 30%;
